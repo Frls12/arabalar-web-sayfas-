@@ -1,0 +1,454 @@
+/* General settings*/
+
+@font-face {
+    font-family: 'Raleway' ;
+    src: url('../font/Raleway-Regular.ttf');
+}
+
+body {
+     background-color:rgb(255, 255, 255);
+     color: 3f3f3f;
+     font: 14px / 28px;
+     font-family: 'Raleway';
+      
+
+}
+h1{
+    font-size: 52px;
+    letter-spacing: 4px; /* harfleri birbirinden uzaklaştırmak için*/
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 16px;
+    color: #449c9c;
+    transition:  all .5s ease ;
+}
+.sectionHeader{
+    background: #449c9c;
+    border-bottom: 6px solid #333;
+    height: 60px;
+    color: #fff;
+    display: inline-block; /* blok olarak kapsamaması için inline özelligini kulanıyourz*/
+    line-height: 60px;
+    font-size: 24px;
+    padding: 5px 40px;
+    letter-spacing: 2px; /* harfleri birbirinden uzaklaştırmak için*/
+    margin-bottom: 20px;
+}
+.sectionArea{
+    padding: 100px 0px;
+    
+
+}
+
+/* General settings*/
+.continer {
+
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+   
+
+}
+.featuresBody .continer{
+    justify-content: space-between;
+}
+.col3{
+    flex-grow: 1; /* sutun uzunlugu eşitligi*/
+    width: 33.33%; /* sutun genişligi eşitligi 3 e bölündügü için 33*/
+}
+.engineBody .continer {
+    justify-content: space-between;
+}
+.col2{
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+   
+}
+
+
+
+
+/* General anasayfa*/
+header .logo{
+    margin-right: auto;
+}
+
+header .logo img {
+    display: block;
+    height: 70px;
+}
+
+.menu li{
+
+    float: left;
+}
+.menu li a{
+    padding: 27px 17px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #333;
+    transition: all .5s ease ;
+}
+.menu li:hover a{
+    background-color: #449c9c ;
+    color: white;
+}
+#mainSlider{
+    height: 500px;
+    background: url('../img/carmain1.jpg') center center no-repeat;
+    background-size: cover;
+}
+.slider{
+    width: 100%;
+}
+#mainCaption{
+    height: 500px;
+    background: rgba(0, 0 ,0, .5);
+}
+.caption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color:white;
+} 
+
+.featuresTop{
+   text-align: center;
+   
+}
+.item{
+    padding: 10px 20px;
+}
+.zoom{
+    position: relative;
+    overflow: hidden; /* zoom üstene gelince çalışması için */
+    display: inline-block;
+    width: 100%;
+    vertical-align: top ;
+}
+.zoom img{
+    display: block;
+    width: 100%;
+    height: auto ;
+    transition: all .5s ease;
+}
+.item .itemText {
+    text-align: center;
+    padding: 15px;
+    border:  1px solid #449c9c;
+}
+.item:hover .zoom img {
+    transform: scale(1.25); /* üzerine geldiginde 1.25 zoom yapcak */
+    transition: all .5s ease;
+
+}
+.item:hover h3 {
+    color: white;
+}
+.item:hover .itemText{
+    background: #449c9c;
+    color: white;
+    transition: all .5s ease ; 
+}
+.btn {
+    color: #449c9c;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #449c9c;
+    transition: all .5s ease ;
+}
+.item:hover .btn{
+    color: #fff;
+    border: 1px solid #fff;
+    
+    
+}
+.itemText p{
+    margin: 20px 0;
+}
+#parallax{
+    background: linear-gradient(
+                rgba(0,0,0,.7),
+                rgba(0,0,0,.7)
+                ),
+                url('../img/ibrenew1.jpg');
+    background-attachment: fixed; /* resmin fix kalmasını sagliyor */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#parallax p{
+    color: #fff;
+}
+.engineTop {
+    text-align: center;
+    padding: 20px 0;
+    
+}
+.engineContiner{
+    position: relative;  /* pozisyonu kendine göre olucak */
+    width: 100%;
+}
+.imageOver{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.engineOverlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(37, 144, 151, 0.7);
+    overflow: hidden;
+    width: 0%;   /* genişlik 0 */
+    height: 100%;
+    transition: .5s ease;
+}
+
+.engineContiner:hover .engineOverlay{
+    width: 100%; /* genişik 100 bu sayede efekt geliyor */
+}
+.engineText{ 
+    white-space: nowrap; /* alt alta gelmeyi önlemek için*/
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+.engineOverlay2{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(37, 144, 151, 0.7);
+    overflow: hidden;
+    width: 0%;   /* genişlik 0 */
+    height: 100%;
+    transition: .5s ease;
+
+}
+.engineContiner:hover .engineOverlay2{
+    width: 100%; /* genişik 100 bu sayede efekt geliyor */
+    left: 0 ;
+    
+}
+footer{
+      background: #0b3138;
+      text-align: center;
+}
+.items p{
+    color: #fff;
+   
+}
+.items img{
+    height: 50%;
+    opacity: 10;
+    padding: 20px;
+
+
+}
+
+footer h3{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.sosialLinks li{
+  
+    display: inline-block;
+    width: 30px;
+ 
+}
+.menuler li{
+    margin-bottom: 10px;
+}
+.engineBody {
+    padding: 80px;
+}
+footer .fab{
+    font-size: 30px;
+    color: #449c9c;
+    line-height: 50px;
+    transition: .3s ease ;
+}
+footer .fab:hover{
+    color: #fff;
+}
+.menuler a{
+    text-decoration: none;
+    color: #449c9c;
+    letter-spacing: 2px;
+    transition: .3s ease ;
+}
+.menuler a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*classic car*/
+
+#carssSlider{
+    height: 250 px;
+    background: url('../img/carsclassic.png') center center no-repeat;
+    background-size: cover;
+}
+#carssCaption{
+    height: 250px;
+    background: rgba(0, 0 ,0, .5);
+}
+#inspect{
+    background-color: #f5f5f5;
+}
+
+.inspectBody .col2{
+  display: flex;
+  
+}
+.inspectTop{
+    text-align: center;
+}
+.inspectImg {
+    width: 60%;
+}
+.inspectImg img{
+    width: 100%;
+    height: auto;
+    
+}
+.inspectText{
+    width: 40%;
+    padding-left: 10px;
+    text-align: left;
+    
+}
+
+.date{
+    color: #333;
+    font-size: 12px;
+    font-style: italic ;
+    padding: 5px;
+    text-align: left;
+}
+
+h4{
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    
+}
+.inspectText a{
+   float:right;
+   text-decoration: none;
+   color: #449c9c;
+}
+.inspectText a:hover {
+    text-decoration: underline;
+}
+.inspectImg p{
+    position: relative;
+}
+.continer .col2{
+
+    background-color: rgba(37, 144, 151, 0.2);
+    overflow: hidden;
+    width: 0%;   /* genişlik 0 */
+    height: 100%;
+    transition: .5s ease;
+ 
+}
+
+/*about page*/
+
+#aboutSlider{
+    height: 250 px;
+    background: url('../img/about-t-hero_d.jpg') center center no-repeat;
+    background-size: cover;
+}
+#aboutCaption{
+    height: 250px;
+    background: rgba(0, 0 ,0, .5);
+}
+
+.teamTop{
+  text-align: center;
+}
+
+.teamBody .continerFluid{
+     display: flex;
+     width: 100%;
+}
+.teamMember{
+    position: relative;
+    width: 100%;
+}
+.teamMemberImg{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.teamMemberOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-color: #0b3138;
+    transition: .5s ease;
+}
+.teamMember:hover .teamMemberOverlay{
+    opacity: 0;
+}
+.teamMember:hover .teamMemberInfo  {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    transform: translate(-50%,-50%);
+    
+}
+.teamTitle{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    transform: translate(-50%,-50%);
+
+}
+.teamMemberInfo{
+    color: #fff;
+    background-color: rgba(37, 144, 151, 0.7);
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .5s ease;
+    padding: 20px;
+    text-align: center;
+}
+.memberSoscialLinks {
+    text-align: center;
+}
+.memberSoscialLinks li {
+    display: inline;
+    margin: left 5px;
+    margin-right: 5px;
+}
+.memberSoscialLinks .fa{
+ color:#fff;
+}
